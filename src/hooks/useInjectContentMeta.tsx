@@ -20,15 +20,12 @@ export default function useInjectContentMeta<T extends ContentType>(
   const { data: contentMeta, error } = useSWR<Array<ContentMeta>>(
     contentMetaFlag ? '/api/content' : null
   );
-  console.log()
   const isLoading = !error && !contentMeta;
   const meta = React.useMemo(
     () => pickContentMeta(contentMeta, type),
     [contentMeta, type]
   );
-    React.useEffect(()=>{
-      console.log("contentMeta",contentMeta)
-    },[contentMeta])
+
   type PopulatedContent = Array<PickFrontmatter<T> & InjectedMeta>;
 
   const [populatedContent, setPopulatedContent] =
@@ -37,7 +34,6 @@ export default function useInjectContentMeta<T extends ContentType>(
     );
 
   React.useEffect(() => {
-    console.log("meta",meta)
     if (meta) {
       const mapped = frontmatter.map((fm) => {
         const views = meta.find(

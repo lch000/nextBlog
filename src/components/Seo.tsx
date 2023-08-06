@@ -10,6 +10,7 @@ const defaultMeta = {
     'Chocolate 个人博客，JS，TS，LeetCode，Vue，React，算法爱好者。座右铭：学如逆水行舟，不进则退！',
   keywords: 'Next.js,React,Vue3,Blog,前端,b站up主',
   image: '',
+  url:"",
   type: 'website',
   robots: 'follow, index',
 };

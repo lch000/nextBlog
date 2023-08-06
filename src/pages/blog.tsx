@@ -45,8 +45,6 @@ export default function IndexPage({
   );
   const [isEnglish, setIsEnglish] = React.useState<boolean>(false);
   const isLoaded = useLoaded();
-    console.log("posts",posts)
-    console.log("tags",tags)
 
   const populatedPosts = useInjectContentMeta('blog', posts);
 

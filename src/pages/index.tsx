@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { InferGetStaticPropsType } from 'next';
 import * as React from 'react';
-import { SiBilibili, SiGithub, SiTwitter, SiYoutube } from 'react-icons/si';
+import { SiBilibili, SiGithub } from 'react-icons/si';
 import { InView } from 'react-intersection-observer';
 
 import { trackEvent } from '@/lib/analytics';
@@ -113,14 +113,13 @@ export default function HomePage({
                         GitHub
                       </div>
                     </CustomLink>
-                  
+
                     <CustomLink href='https://space.bilibili.com/291850811'>
                       <div className='flex items-center gap-1'>
                         <SiBilibili />
                         Bilibili
                       </div>
                     </CustomLink>
-                 
                   </div>
                 </div>
 
@@ -135,9 +134,7 @@ export default function HomePage({
                   don't advance, you will retreat!
                 </p>
 
-                <div data-fade='5' className='mt-4 flex' 
-                
-                >
+                <div data-fade='5' className='mt-4 flex'>
                   <CustomLink
                     href='/'
                     onClick={() =>
